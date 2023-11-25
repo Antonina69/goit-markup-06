@@ -346,7 +346,7 @@ border: 1px solid #0000001A;
 }
 .modal-input:hover,
 .modal-input:focus,
-.modal-input:focus-within {
+.modal-input:focus-within{
         border-color: var(--color-brand);
 }
 
@@ -370,11 +370,14 @@ border: 1px solid #0000001A;
                 text-align: left;
                 color: #75757580;
 }
-/* .modal-input-area:placeholder { */
+.modal-input-area::placeholder {
+color: #75757580;
+}
 
 .modal-input-area:hover,
 .modal-input-area:focus,
-.modal-input-area:focus-within 
+.modal-input-area:focus-within,
+.modal-input-area:not(:placeholder-shown) 
  {
         border-color: var(--color-brand);
 }
@@ -407,7 +410,7 @@ position: relative;
         /* left: 0;  */
         width: 16px;
         height: 15px;
-         /* background-color: #000;  */
+        background-color: #000;
         margin-right: 7px;
         outline: #212121;
         border-radius: 4px;

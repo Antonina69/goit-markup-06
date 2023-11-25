@@ -105,8 +105,8 @@
           </li>
               <li> 
                 <label class="modal-label">Коментар
-              <area class="modal-text-area" name="coments">
-               <textarea class="modal-input-area" type="" name="coments" placeholder="Введіть текст">
+              <!-- <area class="modal-text-area" name="coments"> -->
+               <textarea class="modal-input-area" type="textarea" name="coments" placeholder="Введіть текст">
 
                </textarea>
 
@@ -120,11 +120,14 @@
            <label class="policy-group">
             <input type="checkbox" class="checkbox visually-hidden"/>
             <span class="custom-checkbox">
-               <svg width="16" height="15" class="icon-policy">
+              <span class="icon-policy">
+                <svg width="16" height="15" >
               <use href="./images/sprite.svg#icon-check">
 
               </use> 
             </svg>
+
+              </span> 
           </span>
            
 <span class="policy">Погоджуюся з розсилкою та приймаю  <span  a href="" target="_blank" class="conditions">Умови договору</span> </span>
@@ -622,7 +625,7 @@
       <p class="title-subscription">Підпишіться на розсилку</p>
        <form  class="footer-form" name="signup-form" novalidate>
         <label class="footer-label">
-          <input class="fild-for-email" type="email" name="email" placeholder="E-mail">
+          <input class="fild-for-email" type="email" name="email" placeholder="E-mail"/>
         </label>
         
         <button type="submit" class="footer-button">Підписатися

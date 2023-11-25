@@ -321,9 +321,10 @@ border: 1px solid #0000001A;
 
 .modal-label {
         position: relative;
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 4px;
+        /* display: block; */
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
                 font-size: 12px;
                 font-weight: 400;
                 line-height: 14px;
@@ -331,47 +332,46 @@ border: 1px solid #0000001A;
                 text-align: left;
                 color: var(--color-secondary);
 }
-.modal-label:first-child {
-        margin-top: 0;
-}
+
 .modal-input {
-        display: block;
-        width: 100%;
+        /* display: block; */
+        /* width: 100%; */
         border: 1px solid #21212133;
         border-radius: 4px;
         margin-left: 0;
+        margin-top: 4px;
         padding: 11px;
         transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        padding-left: 83px;
+        padding-left: 42px;
 }
 .modal-input:hover,
-.modal-input:focus {
+.modal-input:focus,
+.modal-input:focus-within {
         border-color: var(--color-brand);
 }
 
-.modal-input:focus-within >.icon-placeholder {
+.modal-input:focus-within > .icon-placeholder {
         fill: var(--color-brand);
 }
 .modal-input-area {
-        display: block;
-        width: 100%;
+        /* display: block; */
+        /* width: 100%; */
         height: 120px;
         padding: 12px 16px;
+        margin-top: 4px;
         border: 1px solid #21212133;
-                border-radius: 4px;
-                 transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-input-area:placeholder {
-                font-size: 12px;
+        border-radius: 4px;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        resize: none;
+        font-size: 12px;
                 font-weight: 400;
                 line-height: 14px;
                 letter-spacing: 0.01em;
                 text-align: left;
                 color: #75757580;
-                justify-content: start;
-                align-items: start;
-                
 }
+/* .modal-input-area:placeholder { */
+
 .modal-input-area:hover,
 .modal-input-area:focus,
 .modal-input-area:focus-within 
@@ -407,20 +407,19 @@ position: relative;
         /* left: 0;  */
         width: 16px;
         height: 15px;
-         background-color: #000; 
+         /* background-color: #000;  */
         margin-right: 7px;
         outline: #212121;
         border-radius: 4px;
         outline-offset: -2px;
-        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox:checked .icon-policy {
+.policy-group:checked ~ .icon-policy {
         opacity: 1;
        
 }
-.checkbox:checked {
+.policy-group:checked {
 background-color: var(--color-brand);
         border: 0.2px solid #FFFFFF;
 }
@@ -433,6 +432,7 @@ background-color: var(--color-brand);
         opacity: 0;
         fill: var(--color-light);
         margin-right: 7px;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -440,6 +440,7 @@ background-color: var(--color-brand);
 color: var(--color-brand);
 }
 .icon-placeholder {
+        display: flex;
         position: absolute;
         bottom: 11px;
         left: 12px;
@@ -940,6 +941,11 @@ margin-bottom: 20px;
         width: 358px;
         padding: 15px;
         background-color: transparent;
+        font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0.03em;
+                text-align: left;
        
         
         
@@ -959,15 +965,11 @@ margin-bottom: 20px;
         align-items: center;
         background-color: #2F303A;
 }
-.fild-for-email:placeholder {
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 20px;
-                letter-spacing: 0.03em;
-                text-align: left;
+/* .fild-for-email:placeholder { */
+               
 
 
-}
+
 
                 
 

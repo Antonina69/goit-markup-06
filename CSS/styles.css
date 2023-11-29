@@ -316,12 +316,16 @@ border: 1px solid #0000001A;
 .modal-button:focus .icon-close-modal {
 fill: var(--color-brand);
 }
-.title-form {font-size: 20px;
+.title-form {
+        font-size: 20px;
         font-weight: 700;
-        line-height: 23px;
+        line-height: 1.15;
         letter-spacing: 0.03em;
         text-align: center;
-        margin-bottom: 12px;
+       
+}
+.modal {
+        margin-top: 12px;
 }
 
 .modal-label {
@@ -331,13 +335,13 @@ fill: var(--color-brand);
         margin-bottom: 10px;
                 font-size: 12px;
                 font-weight: 400;
-                line-height: 14px;
+                line-height: 1.16;
                 letter-spacing: 0.01em;
                 text-align: left;
                 color: var(--color-secondary);
         
 }
-.modal-label:nth-child(5) {
+.modal-label:nth-child(4) {
         margin-bottom: 20px;
 }
 
@@ -350,6 +354,7 @@ fill: var(--color-brand);
         transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         padding-left: 42px;
         outline: none;
+        height: 40px;
 }
 .modal-input:hover,
 .modal-input:focus
@@ -379,7 +384,7 @@ fill: var(--color-brand);
 
         font-size: 12px;
         font-weight: 400;
-        line-height: 14px;
+        line-height: 1.16;
         letter-spacing: 0.01em;
         text-align: left;
         justify-content: start;
@@ -395,7 +400,7 @@ fill: var(--color-brand);
 .policy {
         font-size: 14px;
         font-weight: 400;
-        line-height: 24px;
+        line-height: 1.71;
         letter-spacing: 0.03em;
         text-align: left;
         color: var(--color-secondary);
@@ -417,12 +422,18 @@ position: relative;
        width: 16px;
         height: 15px;
         margin-right: 7px;
-        outline: 2px solid #212121;
+        border: 2px solid #212121;
         border-radius: 4px;
-        outline-offset: -2px;  
+        
         background-color: transparent;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+       
         border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox:hover + .custom-checkbox,
+.checkbox:focus + .custom-checkbox {
+border-color: var(--color-brand);
+
 }
 
 .checkbox:checked + .custom-checkbox .icon-policy{
@@ -454,7 +465,7 @@ text-decoration: underline;
         fill: #212121;
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modaL-submit {
+.modal-submit {
 padding: 10px 52px;
 width: 200px;
 height: 50px;
@@ -469,8 +480,8 @@ color: var(--color-light);
         cursor: pointer;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modaL-submit:hover,
-.modaL-submit:focus {
+.modal-submit:hover,
+.modal-submit:focus {
         background-color: var(--color-button);
 }
 
@@ -910,7 +921,7 @@ background-color: var(--color-brand);
                        
 }
 .footer-subscription {
-        margin-left: 93px;
+        margin-left: auto;
         width: 570px;
         height: 86px;
         padding: 0;
@@ -974,11 +985,9 @@ margin-bottom: 20px;
         align-items: center;
         background-color: #2F303A;
         
-        /* background-color: linear-gradient(0deg, rgba(33, 150, 243, 0), rgba(33, 150, 243, 0)), */
-                /* linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)); */
-                /* box-shadow: 0px 4px 4px 0px #00000026; */
+      
 }
-/* .fild-for-email:placeholder { */
+
                
 
 
